@@ -1,4 +1,4 @@
-Features
+Features:
 The website is organized into 8 core components:
 Home: A high-impact landing page featuring a hero section and the club's primary mission.
 About Us: Detailed information regarding the club’s history, vision, and core values.
