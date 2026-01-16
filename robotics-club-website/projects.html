@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="projects.css">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand logo-container" href="#">
+            <img src="/images/logo.png" height="60px" alt="Logo">
+        </a>
+  
+        <button class="mobile-toggler d-lg-none" id="hamburgerBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="nav-items ms-auto me-auto">
+                <a href="home.html" class="card">Home</a>
+                <a href="about.html" class="card">About</a>
+                <a href="projects.html" class="card">Projects</a>
+                <a href="events.html" class="card">Events</a>
+                <a href="team.html" class="card">Team</a>
+                <a href="news.html" class="card">News</a>
+                <a href="achievements.html" class="card">Achievements</a>
+            </div>
+            <div class="contact-btn">
+                <a href="contacts.html" class="card">Contacts</a>
+            </div>
+        </div>
+  
+        <div class="mobile-slide-menu" id="mobileMenu">
+            <button class="close-menu" id="closeMenuBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mobile-nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="events.html">Events</a>
+                <a href="team.html">Team</a>
+                <a href="news.html">News</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="contacts.html">Contacts</a>
+            </div>
+        </div>
+    </div>
+  </nav>
+      <div class="container-fluid">
+          <a class="navbar-brand logo-container" href="#">
+              <img src="/images/logo.png" height="60px" alt="Logo">
+          </a>
+  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: rgba(255,255,255,0.5);">
+              <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="nav-items ms-auto me-auto">
+                  <a href="home.html" class="card">Home</a>
+                  <a href="about.html" class="card">About</a>
+                  <a href="projects.html" class="card">Projects</a>
+                  <a href="events.html" class="card">Events</a>
+                  <a href="team.html" class="card">Team</a>
+                  <a href="news.html" class="card">News</a>
+                  <a href="achievements.html" class="card">Achievements</a>
+              </div>
+              <div class="contact-btn">
+                  <a href="contacts.html" class="card">Contacts</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+
+
+    <div class="header">
+        <!-- <div id="category-hero" class="category-bg"></div> -->
+        
+        <div class="header-content">
+            <h1 class="h1" >ROBOTICS PROJECTS</h1>
+            
+            <div class="filter-controls">
+                <div class="filter-buttons">
+                    <span class="filter-label">Category:</span>
+                    <button class="filter-btn active" onclick="filterCategory('all', this, 'images/all-hero.jpg')">All</button>
+                    <button class="filter-btn" onclick="filterCategory('drones', this, 'images/drones-hero.jpg')">Drones</button>
+                    <button class="filter-btn" onclick="filterCategory('robots', this, 'images/robots-hero.jpg')">Robots</button>
+                    <button class="filter-btn" onclick="filterCategory('creative', this, 'images/creative-hero.jpg')">Creative</button>
+                </div>
+
+                <div class="filter-buttons">
+                    <span class="filter-label">Year:</span>
+                    <button class="filter-btn active" onclick="filterYear('all', this)">All</button>
+                    <button class="filter-btn" onclick="filterYear('2024', this)">2024</button>
+                    <button class="filter-btn" onclick="filterYear('2025', this)">2025</button>
+                    <button class="filter-btn" onclick="filterYear('2026', this)">2026</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="projectGrid">
+        <div class="img-glass real-card" data-category="drones" data-year="2024">
+           <div class="img1">
+            <img src="/images/drone1.png" alt="Drone 1">
+            <div class="short-description">
+                <h3>PLUTOX</h3>
+                <p>This is the plutox</p>
+          </div>
+        </div> 
+           <div class="trigger" id="trigger1" onclick="toggleBox(this)">
+            See more</div>
+           <div class="hidden-box" id="hidden-box1" >
+            <div class="content">
+                <h3>PLUTOX</h3>
+                <p>PlutoX is an open-source programmable nano drone, by an IIT Bombay based Indian company Drona Aviation. It comes with a 720p 1MP wifi camera that can do ROS based image processing. The scope of application of the drone is limitless. It can be used to make image-processing based projects like traffic monitoring drone, or a trespasser detection drone. Also it can be used to collect data from places beyond human reach like mines. The drone can be controlled manually using the pluto controller application and can be operated in either tilt mode or joystick mode. .</p>
+                <button class="close-btn" onclick="closeFromBtn(this)">Close
+                </button>
+            </div>
+        </div>
+        </div>
+
+        <div class="img-glass real-card" data-category="robots" data-year="2024">
+           <div class="img1">
+            <img src="/images/robot1.png" alt="Robot 1">
+            <div class="short-description">
+                <h3>HEXAPOD</h3>
+                <p>This is the six legged hexapod.</p>
+          </div>
+        </div> 
+           <div class="trigger" id="trigger2" onclick="toggleBox(this)">See more
+
+           </div>
+           <div class="hidden-box" id="hidden-box2">
+            <div class="content">
+                <h3>HEXAPOD</h3>
+                <p>Hexapods are used for moving and precision positioning, aligning and displacing loads in all six degrees of freedom, i.e., three linear and three rotational axes. components used: microcontroller board Arduino nano, servo motor SG90, servo driver PCA9685, 3D printed body and moving components.The Arduino Nano serves as the "brain" of the hexapod. It calculates the Inverse Kinematics (IK)—the mathematical process of determining how much each of the six servos must rotate to achieve a specific position (X, Y, Z) and orientation (Roll, Pitch, Yaw) for the top platform..</p>
+                <button class="close-btn" onclick="closeFromBtn(this)">
+                    Close
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <div class="img-glass real-card" data-category="drones" data-year="2025">
+           <div class="img1">
+            <img src="/images/drone2.png" alt="Drone 2">
+            <div class="short-description">
+                <h3>DRONE</h3>
+                <p>This is the flying drone.</p>
+          </div>
+        </div> 
+           <div class="trigger" id="trigger3" onclick="toggleBox(this)">See more
+
+           </div>
+           <div class="hidden-box" id="hidden-box3">
+            <div class="content">
+                <h3>DRONE</h3>
+                <p>Air quality monitoring drone. It is a manually controlled drone that acquires data about the concentration of various gases in the atmosphere and reflects the same on google firebase. It can be used to monitor the pollution level across the city sitting from the control room or can be even used to detect the presence of toxic gases at unreachable places like mines. The aviation unit of the project consists of KK 2.1.5 Multirotor Flight Control Board, 4 1000 KV Brushless Motor (BLDC) and propellers, 4 Electronic Speed Controllers (ESC), a 6-channel tansmitter+receiver, and the 3D printed frame.</p>
+                <button class="close-btn" onclick="closeFromBtn(this)">Close</button>
+            </div>
+        </div>
+        </div>
+
+        <div class="img-glass real-card" data-category="creative" data-year="2025">
+            <div class="img1"><img src="images/creative1.png" alt="Creative 1">
+                <div class="short-description">
+                    <h3>RADAR NAVIGATION</h3>
+                    <p>This is the radar navaigation setup.</p>
+              </div>
+            </div> 
+            <div class="trigger" id="trigger4" onclick="toggleBox(this)">See more</div>
+            <div class="hidden-box" id="hidden-box4">
+                <div class="content">
+                    <h3>RADAR NAVIGATION</h3>
+                    <p>The Radar Navigation is used in identifying, tracking (with integrated ARPA) and positioning of vessel among other things in order to adhere to the COLREGs so as to safely navigate a ship from one point to another. The marine radar is classified under the x-band (10 GHz) or S-band (3GHz) frequencies. The x-band, being of higher frequency is used for a sharper image and better resolution whereas the S-band is used especially when in rain or fog as well as for identification and tracking.</p>
+                    <button class="close-btn" onclick="closeFromBtn(this)">Close
+
+                    </button>
+                </div>
+            </div>
+         </div>
+
+        <div class="img-glass real-card" data-category="robots" data-year="2026">
+           <div class="img1">
+            <img src="/images/robot2.png" alt="Robot 2">
+            <div class="short-description">
+                <h3>SELF BALANCING BOT</h3> 
+                <p>This is the botwho balances itself.</p>
+          </div> 
+        </div> 
+           <div class="trigger" id="trigger5" onclick="toggleBox(this)">
+            See more
+           </div>
+           <div class="hidden-box" id="hidden-box5">
+            <div class="content">
+            <h3>SELF BALANCING BOT</h3>
+            <p>The self-balancing robot is similar to an upside-down pendulum. Unlike a normal pendulum which keeps on swinging once given a nudge, this inverted pendulum cannot stay balanced on its own. It will simply fall over. Then how do we balance it? Consider balancing a broomstick on our index finger which is a classic example of balancing an inverted pendulum. We move our finger in the direction in which the stick is falling. Similar is the case with a self-balancing robot, only that the robot will fall either forward or backward. Just like how we balance a stick on our finger, we balance the robot by driving its wheels in the direction in which it is falling. </p>
+            <button class="close-btn" onclick="closeFromBtn(this)">
+                Close
+            </button>
+        </div>
+        </div>
+        </div>
+
+        <div class="img-glass real-card" data-category="creative" data-year="2026">
+           <div class="img1"><img src="images/creative2.png" alt="Creative 2">
+            <div class="short-description">
+                <h3>3D PRINTING</h3>
+                <p>This is the 3D printing device.</p>
+          </div>
+           </div> 
+           <div class="trigger" id="trigger6" onclick="toggleBox(this)">See more</div>
+           <div class="hidden-box" id="hidden-box6">
+            <div class="content">
+                <h3>3D PRINTING</h3>
+                <p>3D printing is a process of making three dimensional solid objects from a digital file. The creation of a 3D printed object is achieved using additive processes. In an additive process an object is created by laying down successive layers of material until the object is created. Each of these layers can be seen as a thinly sliced cross-section of the object. 3D printing is the opposite of subtractive manufacturing which is cutting out / hollowing out a piece of metal or plastic with for instance a milling machine.</p>
+                <button class="close-btn" onclick="closeFromBtn(this)">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+  
+          <div id="col1" class="footer-column">
+  
+            <div id="footer_logo">
+              <img src="/images/logo.png" alt="" height="95px">
+            </div>
+            <div id="footer_heading">
+              <h1>Robotics Club <br> NIT Patna</h1>
+              <br>
+              <p>  <i class="fa-solid fa-location-dot"></i> Ashok Rajpath, National Institute of Technology, Patna Incubation Center 3rd Floor - 800005</p>
+            </div>
+            <ul class="media-icons">
+              <li>
+                <a href="https://www.instagram.com/nitp_official/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/robonitp/"><i class="fa-brands fa-facebook"></i></a>
+              </li> 
+              <li>
+                <a href="https://in.linkedin.com/company/robotics-club-nit-patna"><i class="fa-brands fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/Robotics-Club-NIT-Patna/roboticsclubnitpweb"><i class="fa-brands fa-github"></i></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@roboticsclubnitp8637"><i class="fa-brands fa-youtube"></i></a>
+              </li>         
+            </ul>
+          </div>
+  
+          <div  id="col2" class="footer-column">
+            <ul class="menu">
+              <p><h3>Quick Links</h3></p>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="achievements.html">Achievements</a></li>
+              <li><a href="contacts.html">Contacts</a></li>
+  
+          </ul>
+          </div>
+          <div id="col3" class="footer-column">
+            <img src="images/NITPatna_Logo.png" alt="" height="100px">
+              
+            <ul class="footer_col3_links">
+              <li>
+                <p><i class="fa-solid fa-phone"></i> 0612-2371715</p>
+              </li>
+              <li>
+                <p><i class="fa-regular fa-envelope"></i> info@nitp.ac.in</p>
+              </li>
+              <li>
+                <p><i class="fa-solid fa-globe"></i> www.nitp.ac.in</p>
+              </li>
+              
+            </ul>
+  
+            <ul class="media-icons">
+              <li>
+                <a href="https://x.com/NITPatna1"><i class="fa-brands fa-twitter" target="__blank"></i></i></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/nitpatna/"><i class="fa-brands fa-facebook" target="__blank"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/nit-patna"><i class="fa-brands fa-linkedin" target="__blank"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-regular fa-envelope"></i></a>
+              </li>
+            </ul>
+          </div>
+  
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="mekk">
+            <p>©2024 Robotics Club NIT Patna - All Rights Reserved</p>
+          </div>
+        </div>
+      </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>
