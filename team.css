@@ -20,7 +20,7 @@ body{
     padding: 10px 30px ;
      position: fixed;
      width: 100%;
-    /* position: static; */
+    position: fixed;
     z-index: 1000;
     height: 80px;
     backdrop-filter: blur(20px);
@@ -765,4 +765,5 @@ section {
   }
 
 }
+
 
