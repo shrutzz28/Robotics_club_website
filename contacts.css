@@ -421,7 +421,7 @@ textarea.form-control {
     padding: 80px 0 30px;
     overflow: hidden;
     margin-top: 40px;
-    text-decoration:none;
+   
   
 }
 
@@ -489,6 +489,7 @@ textarea.form-control {
     margin-top: 20px;
     flex-wrap: wrap;
   list-style-type: none;
+     text-decoration:none;
 }
 
 .media-icons a {
@@ -502,6 +503,7 @@ textarea.form-control {
     color: white;
     font-size: 1.2rem;
     transition: all 0.3s;
+     text-decoration:none;
 }
 
 .media-icons a:hover {
@@ -693,3 +695,4 @@ textarea.form-control {
     }
 
 }
+
